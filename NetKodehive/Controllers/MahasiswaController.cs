@@ -27,6 +27,19 @@ namespace NetKodehive.Controllers
         }
 
         //Get
+        [HttpGet]
+        public async Task<List<Mahasiswa>> GetAll()
+        {
+            var result = await mahasiswaService.GetAll();
+            return result;
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var result = await mahasiswaService.Delete(id);
+            return Ok(result);
+        }
     }
     
 }

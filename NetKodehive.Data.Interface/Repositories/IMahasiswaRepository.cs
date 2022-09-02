@@ -10,5 +10,7 @@ namespace NetKodehive.Data.Interface.Repositories
     public interface IMahasiswaRepository
     {
         public Task<bool> Create(Mahasiswa mahasiswa);
+        public Task<List<Mahasiswa>> GetAll();
+        public Task<bool> Delete(int id);
     }
 }

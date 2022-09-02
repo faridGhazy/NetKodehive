@@ -28,5 +28,16 @@ namespace NetKodehive.Data.Repositories
             return true;
         }
 
+        public async Task<bool> Delete(int id)
+        {
+            await _dbService.DeleteData("DELETE FROM mahasiswa WHERE id=@id", new {id = @id});
+            return true;
+        }
+
+        public async Task<List<Mahasiswa>> GetAll()
+        {
+            var result = await _dbService.GetData<Mahasiswa>("Select * From Mahasiswa", new {});
+            return result;
+        }
     }
 }

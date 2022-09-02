@@ -23,5 +23,23 @@ namespace NetKodehive.Service.Service
             var result = await mahasiswaRepository.Create(mahasiswa);
             return true;
         }
+
+        /*public async Task<bool> Delete(Mahasiswa mahasiswa)
+        {
+            var result = await mahasiswaRepository.Delete(mahasiswa);
+            return true;
+        }*/
+
+        public async Task<bool> Delete(int id)
+        {
+            var result = await mahasiswaRepository.Delete(id);
+            return true;
+        }
+
+        public async Task<List<Mahasiswa>> GetAll()
+        {
+            var result = await mahasiswaRepository.GetAll();
+            return result;
+        }
     }
 }
