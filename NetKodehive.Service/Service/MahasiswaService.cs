@@ -41,5 +41,11 @@ namespace NetKodehive.Service.Service
             var result = await mahasiswaRepository.GetAll();
             return result;
         }
+
+        public async Task<bool> Update(Mahasiswa mahasiswa)
+        {
+            var result = await mahasiswaRepository.Update(mahasiswa);
+            return true;
+        }
     }
 }

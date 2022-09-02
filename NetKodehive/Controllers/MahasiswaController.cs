@@ -40,6 +40,13 @@ namespace NetKodehive.Controllers
             var result = await mahasiswaService.Delete(id);
             return Ok(result);
         }
+
+        [HttpPut]
+        public async Task<ActionResult> Update([FromBody] Mahasiswa model)
+        {
+            var result = await mahasiswaService.Update(model);
+            return Ok(result);
+        }
     }
     
 }

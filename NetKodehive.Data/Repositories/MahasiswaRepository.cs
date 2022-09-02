@@ -28,6 +28,8 @@ namespace NetKodehive.Data.Repositories
             return true;
         }
 
+        
+
         public async Task<bool> Delete(int id)
         {
             await _dbService.DeleteData("DELETE FROM mahasiswa WHERE id=@id", new {id = @id});
@@ -38,6 +40,14 @@ namespace NetKodehive.Data.Repositories
         {
             var result = await _dbService.GetData<Mahasiswa>("Select * From Mahasiswa", new {});
             return result;
+        }
+
+        public async Task<bool> Update(Mahasiswa model)
+        {
+            await _dbService.ModifyData("UPDATE mahasiswa " +
+                "SET nama=@nama, alamat=@alamat, usia=@usia, jurusan_id=@jurusan_id " +
+                "where id=@id", model);
+            return true;
         }
     }
 }

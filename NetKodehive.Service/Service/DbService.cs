@@ -37,6 +37,5 @@ namespace NetKodehive.Service.Service
             var result = await _db.ExecuteAsync(command, param);
             return result;
         }
-
     }
 }
