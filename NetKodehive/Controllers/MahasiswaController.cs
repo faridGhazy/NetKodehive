@@ -34,8 +34,15 @@ namespace NetKodehive.Controllers
             return result;
         }
 
+        /*[HttpGet("{id:int}")]
+        public async Task<ActionResult<Mahasiswa>> GetById(int id)
+        {
+            var result = await mahasiswaService.GetDataById(id);
+            return result;
+        }*/
+
         [HttpDelete("{id:int}")]
-        public async Task<ActionResult> Delete(int id)
+        public async Task<ActionResult<Mahasiswa>> Delete(int id)
         {
             var result = await mahasiswaService.Delete(id);
             return Ok(result);

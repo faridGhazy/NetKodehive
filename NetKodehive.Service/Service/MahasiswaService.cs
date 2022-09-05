@@ -33,7 +33,7 @@ namespace NetKodehive.Service.Service
         public async Task<bool> Delete(int id)
         {
             var result = await mahasiswaRepository.Delete(id);
-            return true;
+            return result;
         }
 
         public async Task<List<Mahasiswa>> GetAll()
@@ -41,6 +41,12 @@ namespace NetKodehive.Service.Service
             var result = await mahasiswaRepository.GetAll();
             return result;
         }
+
+        /*public async Task<Mahasiswa> GetDataById(int id)
+        {
+            var result = await mahasiswaRepository.GetById(id);
+            return result;
+        }*/
 
         public async Task<bool> Update(Mahasiswa mahasiswa)
         {

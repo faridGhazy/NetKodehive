@@ -13,5 +13,6 @@ namespace NetKodehive.Service.Interface.Services
         public Task<List<Mahasiswa>> GetAll();
         public Task<bool> Delete(int id);
         public Task<bool> Update(Mahasiswa mahasiswa);
+        /*public Task<Mahasiswa> GetDataById(int id)*/
     }
 }

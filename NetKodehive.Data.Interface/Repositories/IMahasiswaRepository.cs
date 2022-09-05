@@ -13,5 +13,6 @@ namespace NetKodehive.Data.Interface.Repositories
         public Task<List<Mahasiswa>> GetAll();
         public Task<bool> Delete(int id);
         public Task<bool> Update(Mahasiswa mahasiswa);
+        /*public Task<Mahasiswa> GetById(int id);*/
     }
 }

@@ -26,9 +26,7 @@ namespace NetKodehive.Data.Repositories
                 "values"+
                 "(@id, @nama, @alamat, @usia, @jurusan_id)", model);
             return true;
-        }
-
-        
+        }        
 
         public async Task<bool> Delete(int id)
         {
@@ -41,6 +39,12 @@ namespace NetKodehive.Data.Repositories
             var result = await _dbService.GetData<Mahasiswa>("Select * From Mahasiswa", new {});
             return result;
         }
+
+        /*public async Task<Mahasiswa> GetById(int id)
+        {
+            var result = await _dbService.GetDataById<Mahasiswa>("Select * From Mahasiswa where id=@id", new { id = @id });
+            return result;
+        }*/
 
         public async Task<bool> Update(Mahasiswa model)
         {

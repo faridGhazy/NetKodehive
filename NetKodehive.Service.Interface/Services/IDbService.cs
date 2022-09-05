@@ -11,6 +11,7 @@ namespace NetKodehive.Service.Interface.Services
         Task<int> ModifyData(string command, object param);
         Task<List<T>> GetData<T>(string command, object param);
         Task<int> DeleteData(string command, object param);
+        /*Task<List<T>> GetDataById<T>(string command, object param);*/
     }
 
 }
